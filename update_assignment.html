@@ -1,0 +1,16 @@
+<html wtx-context="A5469294-7881-4F9B-90C4-DD263EFDE02A"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>{% extends "base.html" %}
+{% block title %}Update Assignment: {{ assignment.name }}{% endblock %}
+{% block content %}
+<h1>Update Assignment: {{ assignment.name }}</h1>
+<p>You can also <a href="https://www.pythonanywhere.com/user/AishaIS668Patrick/files/home/AishaIS668Patrick/mysite/templates/%7B%7B%20url_for('update_grade',%20assignment_pk=assignment.pk)%20%7D%7D" title="Update the grades for {{ assignment.name }}">update the grades for this assignment</a> instead.</p>
+<form action="{{ url_for('update_assignment', assignment_pk=assignment.pk) }}" method="post" accept-charset="utf-8" wtx-context="5968DBD0-1684-4C8B-8671-D9D815670A14">
+    <p><label>Name: <input type="text" name="name" value="{{ assignment.name }}" required="" autofocus="" wtx-context="BB342DB3-B934-423A-929A-D699EE4D08BC"></label></p>
+    <p><label>Description: <input type="text" name="description" value="{{ assignment.description }}" wtx-context="2FEFB513-6813-40FB-8685-17FAC08859ED"></label></p>
+    <p><label>Make public?: <input type="checkbox" name="is_public" value="is_public" {{="" '="" checked'="" if="" assignment.is_public="" else="" ''="" }}="" wtx-context="1481208D-522C-47CB-B2B4-D0F5827B5403"></label></p>
+    <p><label>Due date: <input type="date" name="due_date" wtx-context="DA1047CB-3462-4F08-B32F-76BB7E9D40CA"></label></p>
+    <p><label>Points <input type="number" min="0" name="points" wtx-context="EF46E255-CE61-4462-A56E-3173B5EFC5A8"></label></p>
+    <p><label>Comment: <textarea name="comment">{{ assignment.comment }}</textarea></label></p>
+    <p><input type="submit" name="update" value="Save" wtx-context="3A7BE87B-D22D-4D1B-AA85-9EA6CE28EB9F"></p>
+</form>
+{% endblock %}</body></html>

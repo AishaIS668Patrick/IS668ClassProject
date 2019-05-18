@@ -1,0 +1,25 @@
+<html wtx-context="9AC06BAD-A221-4CCD-B1EC-97AFD4CD4FE3"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>{% extends "base.html" %}
+{% block title %}Student: {{ student.full_name }}{% endblock %}
+{% block content %}
+<h1>Student: {{ student.full_name }}</h1>
+<p><a href="https://www.pythonanywhere.com/user/AishaIS668Patrick/files/home/AishaIS668Patrick/mysite/templates/%7B%7B%20url_for('update_student',%20student_pk=student.pk)%20%7D%7D">Edit this student's info</a> or <a href="https://www.pythonanywhere.com/user/AishaIS668Patrick/files/home/AishaIS668Patrick/mysite/templates/%7B%7B%20url_for('delete_student',%20student_pk=student.pk)%20%7D%7D">delete this student.</a></p>
+<table>
+    <tbody><tr>
+        <th>Name: </th>
+        <td>{{ student.full_name}}</td>
+    </tr>
+    <tr>
+        <th>Major (Concetration): </th>
+        <td>{{ student.student_major }}</td>
+    </tr>
+    <tr>
+        <th>Student ID: </th>
+        <td>{{ student.pk }}</td>
+    </tr>
+    <tr>
+        <th>Email: </th>
+        <td>{{ student.email }}</td>
+    </tr>
+</tbody></table>
+{% endblock %}</body></html>

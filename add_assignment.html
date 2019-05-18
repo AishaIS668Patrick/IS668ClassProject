@@ -1,0 +1,17 @@
+<html wtx-context="D214BB63-3B6B-46F7-AB37-80AF2DE0E25B"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>{% extends "base.html" %}
+{% block title %}Create an Assignment{% endblock %}
+{% block content %}
+<h1>Create an Assignment</h1>
+<form action="{{ url_for('add_assignment') }}" method="post" accept-charset="utf-8" wtx-context="0ACD445A-0346-469C-8A7E-D7A092EDCC9C">
+    <p><label>Name: <input type="text" name="name" required="" autofocus="" wtx-context="6F2F5E6F-D506-415B-877D-BAB8A57CE39C"></label></p>
+    <p><label>Description: <input type="text" name="description" wtx-context="2CA40794-9D77-4996-8A74-75C8D51B9AA0"></label></p>
+    <p><label>Make public?: <input type="checkbox" name="is_public" value="is_public" checked="checked" wtx-context="2738E733-325A-4938-888F-F635C8C626FB"></label></p>
+    <p><label>Due date: <input type="date" name="due_date" wtx-context="781466ED-7AFF-4630-81A2-DAEA86247DE2"></label></p>
+    <p><label>Points <input type="number" min="0" name="points" wtx-context="38653511-8A0D-440A-9B1C-C0E43D130560"></label></p>
+    <p>
+        <input type="submit" name="create" value="Create assignment" wtx-context="D02F9712-88BC-4347-98C5-3890E4D88710">
+        <input type="submit" name="create_and_add" value="Create assignment and add another…" wtx-context="A7503778-4856-4C7C-A1E7-B35B7EE0B937">
+    </p>
+</form>
+{% endblock %}</body></html>
