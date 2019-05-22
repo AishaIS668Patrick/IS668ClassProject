@@ -1,0 +1,19 @@
+<html wtx-context="D0E3F0EB-0896-47C0-831A-6FA1C28D2C1F"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>{% extends "main_page.html" %}
+{% block title %}Add a Student{% endblock %}
+{% block content %}
+<h1 align="center">Add Student</h1>
+<br>
+<form action="{{ url_for('add_student') }}" method="post" accept-charset="utf-8" wtx-context="22B117C6-E1F6-4DAD-8C10-213E5B51CBD0">
+    <p><label>Student ID: <input type="text" name="id" autofocus="" required="" wtx-context="2F8A2547-CC1F-496A-97A7-70AFFCB5D39F"></label></p>
+    <p><label>First name: <input type="text" name="first_name" autofocus="" required="" wtx-context="BECE8866-23E6-4EE1-8069-176D0162E650"></label></p>
+    <p><label>Last name: <input type="text" name="last_name" required="" wtx-context="5DC6A585-2D06-4C89-93CD-2F6FAD83ADD2"></label></p>
+    <p><label>Student Major: <input type="text" name="student_major" wtx-context="BADCD647-B07A-40E0-82CA-C09CD9402ED5"></label></p>
+    <p><label>Email Address: <input type="email" name="email" wtx-context="27231966-277B-4129-891E-5B125BACF1F8"></label></p>
+    <br>
+    <p>
+        <input type="submit" name="create" value="Add student" wtx-context="BD37FE7E-C907-49CF-8280-F4B1136BD551">
+        <input type="submit" name="create_and_add" value="Add student and add another…" wtx-context="2572FF50-EE68-4007-8A56-7C37166F9896">
+    </p>
+</form>
+{% endblock %}</body></html>

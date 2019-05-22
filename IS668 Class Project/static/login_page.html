@@ -1,0 +1,49 @@
+<html wtx-context="E3A08787-3E7E-4A26-9720-0F7B01B1AFD3"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="login_page_files/bootstrap.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+        <link rel="stylesheet" href="login_page_files/Homework%25204B%2520CSS%2520File%2520Lyons.css">
+        <title>Gradebook</title>
+        </head><body><header> Gradebook
+        </header>
+        <title>Log In</title>
+    
+    
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Login</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                {% if error %}
+                    <div class="alert alert-warning" role="alert">
+                        Incorrect username or password
+                    </div>
+                {% endif %}
+                <form action="." method="POST" wtx-context="EE745239-58BC-4650-93C6-5C9C478242C1">
+                  <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input class="form-control" id="username" name="username" placeholder="Enter your username" wtx-context="5B23CDE5-7DAA-4C17-907E-993716361769">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" wtx-context="3772BED8-891D-4804-9BA2-65D57A6485BB">
+                  </div>
+                  <button type="submit" class="btn btn-success">Log in</button>
+                </form>
+            </div>
+        </div>
+    
+</body></html>

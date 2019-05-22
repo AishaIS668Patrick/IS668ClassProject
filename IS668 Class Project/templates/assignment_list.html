@@ -1,0 +1,28 @@
+<html wtx-context="66721D0F-9EEF-4E55-85BC-24414B0CE32F"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>{% extends "main_page.html" %}
+{% block title %}Assignment List{% endblock %}
+{% block content %}
+<h1 align="center">Assignment List</h1>
+
+        {%- for assignment in assignments %}
+        
+        {%- endfor %}
+    <table align="center">
+    <thead>
+        <tr>
+            <th>Assignment ID</th>
+            <th>Name</th>
+            <th>Points</th>
+            <th>Due Date</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td>{{ assignment.id }}</td>
+            <td><a href="https://www.pythonanywhere.com/user/AishaIS668Patrick/files/home/AishaIS668Patrick/mysite/templates/%7B%7B%20url_for('assignment_view',%20assignment_id=assignment.id)%20%7D%7D">{{ assignment.name }}</a></td>
+            <td class="points">{{ assignment.points }}</td>
+            <td>{{ assignment.due_date }}</td>
+            <td>{{ assignment.description }}</td>
+        </tr></tbody>
+</table>
+{% endblock %}</body></html>
