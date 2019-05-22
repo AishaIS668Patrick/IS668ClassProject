@@ -1,0 +1,33 @@
+<html wtx-context="B2912586-AFA4-41CC-BF09-7FD16A1BB9C9"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>{% extends "main_page.html" %}
+{% block title %}Student: {{ student.full_name }}{% endblock %}
+{% block content %}
+
+<h1 align="center">Student: {{ student.full_name }}</h1>
+<p><a href="https://www.pythonanywhere.com/user/AishaIS668Patrick/files/home/AishaIS668Patrick/mysite/templates/%7B%7B%20url_for('roster')%20%7D%7D">Student Info/Management</a></p>
+
+        {%- for grades in grades %}
+        {%- if student.id and student.has_points %}
+            
+        {%- endif %}
+        {%- endfor %}
+    <table align="center">
+    <tbody><tr>
+        <th>Name: </th>
+        <td>{{ student.full_name}}</td>
+    </tr>
+    <tr>
+        <th>Major (Concentration): </th>
+        <td>{{ student.student_major }}</td>
+    </tr>
+    <tr>
+        <th>Student ID: </th>
+        <td>{{ student.id }}</td>
+    </tr>
+    <tr>
+        <th>Email: </th>
+        <td>{{ student.email }}</td>
+    </tr>
+    <tr><td>{{grades.points}}</td></tr>
+</tbody></table>
+{% endblock %}</body></html>

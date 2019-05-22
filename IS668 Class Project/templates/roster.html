@@ -1,0 +1,32 @@
+<html wtx-context="4AAB3DC5-EA0E-438F-BDB9-2A9609040E76"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>{% extends "main_page.html" %}
+{% block title %}Student Info/Management{% endblock %}
+{% block content %}
+<p><a href="https://www.pythonanywhere.com/user/AishaIS668Patrick/files/home/AishaIS668Patrick/mysite/templates/%7B%7B%20url_for('add_student')%20%7D%7D">Add a new student</a></p>
+<br>
+
+        {%- for student in students %}
+        
+        {%- endfor %}
+    <table align="center">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Student ID</th>
+            <th>Major</th>
+            <th>Email Address</th>
+            <th>Delete?</th>
+        </tr>
+    </thead>
+    <tbody><tr>
+            <td><a href="https://www.pythonanywhere.com/user/AishaIS668Patrick/files/home/AishaIS668Patrick/mysite/templates/%7B%7B%20url_for('student_view',%20student_id=student.id)%20%7D%7D">{{ student.full_name }}</a></td>
+            <td>{{ student.id }}</td>
+            <td>{{ student.student_major }}</td>
+            <td><a href="mailto:{{ student.email }}">{{ student.email }}</a></td>
+            <td><form method="POST" action="./delete" wtx-context="9547B339-28AE-4F6B-9AED-B148FA068849">
+                <input type="hidden" value="{{student.id}}" name="id" wtx-context="E1989917-D4EE-4B4C-8AE1-AED88F597F68">
+                <input type="submit" value="Delete" wtx-context="2B88DA32-E4AE-4EC5-8CE0-54F5430A95F6">
+            </form></td>
+        </tr></tbody>
+</table>
+{% endblock %}</body></html>

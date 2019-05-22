@@ -1,0 +1,37 @@
+<html wtx-context="ED4BAD17-D8FE-4C8E-9251-3826FCDDC95A"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>{% extends "main_page.html" %}
+{% block title %}The Gradebook{% endblock %}
+{% block content %}
+<p align="center">{%- for user in user %}{{ user.class_name }}{%- endfor %}</p>
+
+            {%- for assignment in assignments %}
+            
+            {%- endfor %}
+        
+            {%- for assignment in assignments %}
+            
+            {%- endfor %}
+        
+        {%- for student in students %}
+        
+            {%- endfor %}
+        
+        {%- endfor %}
+    <table align="center">
+    <thead>
+        <tr>
+            <th>Student</th><th><a href="https://www.pythonanywhere.com/user/AishaIS668Patrick/files/home/AishaIS668Patrick/mysite/templates/%7B%7B%20url_for('assignment_view',%20assignment_id=assignment.id)%20%7D%7D">{{ assignment.name }} </a></th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><em>Best Possible</em></td><td class="points"><em>{{ assignment.points }}</em></td></tr><tr>
+            <td><a href="https://www.pythonanywhere.com/user/AishaIS668Patrick/files/home/AishaIS668Patrick/mysite/templates/%7B%7B%20url_for('student_view',%20student_id=student.id)%20%7D%7D">{{ student.full_name }}
+            {%- for grades in grades %}
+            </a></td><td>
+                <student_id="grades"><form method="POST" action="./update" wtx-context="0596223D-F6CF-453B-95D3-541A8CDE85EF">
+                <student_id="grades"><input type="hidden" value="{{grades.points}}" name="oldgrade" wtx-context="4ABF2D23-C895-47AC-9A82-B65B675B4B25">
+                <student_id="grades"><input type="text" value="{{grades.points}}" name="newgrade" wtx-context="54320091-4D4C-47A8-9DA7-5FCA03AB0BF8">
+                <input type="submit" value="Update" wtx-context="206D1C61-B7D7-4075-8135-D0B3D9185600">
+            </student_id="grades"></student_id="grades"></form></student_id="grades"></td></tr></tbody>
+</table>
+{% endblock %}</body></html>

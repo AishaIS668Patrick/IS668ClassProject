@@ -1,0 +1,25 @@
+<html wtx-context="A41B620B-25F9-4FAD-8C51-FB9603A057E3"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>{% extends "main_page.html" %}
+{% block title %}Assignment: {{ assignment.name }}{% endblock %}
+{% block content %}
+<h1 align="center">Assignment: {{ assignment.name }}</h1>
+<p><a href="https://www.pythonanywhere.com/user/AishaIS668Patrick/files/home/AishaIS668Patrick/mysite/templates/%7B%7B%20url_for('assignments')%20%7D%7D">List of all assignments</a></p>
+<table align="center">
+    <tbody><tr>
+        <th>Name: </th>
+        <td>{{ assignment.name }}</td>
+    </tr>
+    <tr>
+        <th>Description: </th>
+        <td>{{ assignment.description }}</td>
+    </tr>
+    <tr>
+        <th>Due date: </th>
+        <td>{{ assignment.due_date }}</td>
+    </tr>
+    <tr>
+        <th>Points: </th>
+        <td>{{ assignment.points }}</td>
+    </tr>
+</tbody></table>
+{% endblock %}</body></html>
